@@ -1,0 +1,17 @@
+Usecase for maze Game
+by Brian Fraser
+
+Play Game:
+1. User starts program to play game.
+2. Game shows directions and initial game board.
+3. Player enters move using WASD keys for directions to move piece.
+4. Game shows game board redrawn with new location for player and cats.
+5. If player moves onto cell containing cheese, count of cheese collected increases.
+6. If player moves onto cell containing a cat, player dies and game ends.
+7. Repeat #3 and #4 until player has won (collected enough cheese) or lost.
+8. User shown final message about winning or losing.
+
+Variation: Input Error
+1.1 In step 3, user enters incorrect input format.
+1.2 Game prompts user with error message.
+1.3 Continue to step 3. 

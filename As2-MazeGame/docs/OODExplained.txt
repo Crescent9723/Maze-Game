@@ -1,0 +1,26 @@
+OOD Explained
+by Brian Fraser
+
+User interaction (UI)
+---------------------
+- In ca.cmpt213.as2.textui package, the MazeGameText class instantiates both the Game class, and the MazeTextUI class.
+- The UI takes a reference to the game in its constructor.
+- UI class controls the sequence of actions in the game, but the game class has all the logic.
+- UI class able to print game board to screen and ask for user input.
+
+Maze Creation
+-------------
+- MazeGame class instantiates a Maze object for tracking the maze. 
+- Maze object implements randomized Prim's algorithm to generate the maze.
+- Once generated, it randomly removes some walls to create loops in the maze. 
+- It also ensures the four corners are not walls to facilitate the player and cats appearing on board.
+- Finally, using a flood-fill algorithm, the PathFinder class is used to ensure that all four corners have paths.
+
+
+Tracking Visible Maze
+---------------------
+- The CellState class represents the state for a single cell in the game board.
+- It tracks when it is visible or not.
+- At startup, the cells around the player are made visible by the MazeGame class.
+- As the player moves, all cells around the player are made visible.
+- Logic is slightly simplified because the game board is surrounded by a wall, and hence cannot go out of bounds.
